@@ -16,6 +16,11 @@ body, html {
   justify-content: center;
   align-items: center; }
 
+.hello h2 {
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500;
+  font-size: 6.8462rem; }
+
 .book {
   /* H2 styling */
   /* end h2 styling*/ }
