@@ -95,6 +95,14 @@ body, html {
     font-size: 6.8462rem; }
 
 /******************************
+* w3c image slide
+*/
+.w3c-image figure {
+  width: 75%; }
+  .w3c-image figure img {
+    width: 100%; }
+
+/******************************
 * flex-demo
 */
 .flex-demo {
