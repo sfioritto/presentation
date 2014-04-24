@@ -1,0 +1,10 @@
+$base-color: rgb(62, 117, 171);
+$light-base-color: lighten($base-color, 25%);
+$lighter-base-color: lighten($base-color, 45%);
+$lightest-base-color: lighten($base-color, 50%);
+$dark-base-color: darken($base-color, 15%);
+$complementary-color: #e46119;
+$black: #222222;
+$grey: lighten($black, 10%);
+$light-grey: lighten($black, 25%);
+$lighter-grey: lighten($black, 45%);

@@ -81,18 +81,27 @@
 * flex conatiner versus child elements
 
 * flex-grow, flex-shrink, flex-basis
-** gonna fly through this, it's the most complicated. usually takes some fudging to get it right
+** gonna fly through this, just give you the idea. it's the most complicated. usually takes some fudging to get it right. 
 
 * flex-shrink
 ** container squashing
 
 * flex-basis
-** 0
 ** auto
+** show with flex: 0 0 auto and a very long piece of content in the middle
+** show with flex: 1 1 auto, space evenly distributed.
+** show with flex: 1 1 0, middle thing now overflows.
 
+* sticky footer
 
+* html
+* css
+* result
 
+* holy grail
+* html
+* css
+* result
 
-
-
+* tips for using it today
 

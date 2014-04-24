@@ -1,0 +1,100 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+body, html {
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.slide {
+    background: url('pw_pattern.png');
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.book {
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    figure {
+        padding-left: 4rem;
+        img {
+            width: 100%;
+            -webkit-filter: drop-shadow(0px 10px 26px #222222);
+        }
+    }
+    
+    h2 {
+        @include tungsten;
+        text-transform: uppercase;
+    }
+    /* H2 styling */
+    h2 > span{
+        display: block;
+    }
+    
+    h2 .top {
+        font-size: 3.8rem;
+    }
+    
+    h2 > .middle{
+        @include archer-light;
+        font-style: italic;
+        font-size: 5.7rem;
+        color: $light-base-color;
+    }
+    
+    h2 > .bottom {
+        font-size: 4.5rem;
+    }
+    
+    h2 > .sketch{
+        font-weight: 200;
+        font-size: 7.4rem;
+        color: $dark-base-color;
+    }
+/* end h2 styling*/
+    
+}
+
+.flex-basis-auto {
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        > div {
+            border: 1px solid #222;
+            padding: 1rem;
+            background: #eee;
+            height: 100px;
+            flex: 1 1 0;
+            -webkit-background-clip: content;
+        }
+        
+        .outer {
+            //        width: 100px;
+        }
+        
+        .middle {
+            //        width: 200px;
+        }
+    }
+}
