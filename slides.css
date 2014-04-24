@@ -59,6 +59,31 @@ body, html {
   font-size: 6.8462rem;
   width: 6em; }
 
+/******************************
+* flex slide
+*/
+.flexbox {
+  background: #222; }
+  .flexbox h2 {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-weight: 400;
+    font-size: 6.8462rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #e46119; }
+
+/******************************
+* Display options
+*/
+.display-options {
+  flex-direction: column; }
+  .display-options .flex {
+    color: #e46119; }
+  .display-options h2 {
+    font-family: 'Tungsten A', 'Tungsten B';
+    font-weight: 400;
+    font-size: 6.8462rem; }
+
 .flex-basis-auto .container {
   height: 100%;
   display: flex;

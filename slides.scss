@@ -85,6 +85,36 @@ body, html {
     }
 }
 
+/******************************
+* flex slide
+*/
+
+.flexbox {
+    background: #222;
+    h2 {
+        @include tungsten;
+        font-size: $font-size-5;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: $complementary-color;
+    }
+}
+
+/******************************
+* Display options
+*/
+
+.display-options {
+    flex-direction: column;
+
+    .flex { color: $complementary-color; }
+
+    h2 {
+        @include tungsten;
+        font-size: $font-size-5;
+    }
+}
+
 
 .flex-basis-auto {
     .container {
