@@ -27,8 +27,7 @@ body, html {
   .book figure {
     padding-left: 4rem; }
     .book figure img {
-      width: 100%;
-      -webkit-filter: drop-shadow(0px 10px 26px #222222); }
+      width: 100%; }
   .book h2 {
     font-family: 'Tungsten A', 'Tungsten B';
     font-weight: 400;
