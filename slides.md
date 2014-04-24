@@ -25,19 +25,13 @@
 * display: block
 * display: inline-block
 
-* flex container
-** (boxes move left to right, rotate cross-axis, grow, shrink, holy grail layout, re-order)
-
-* not a panacea
-** the syntax is a little weird
-** has some rendering problems with larger screens and a lot of text
-** no polyfill yet, browser support (only the latest)
-** cover all of this, but just thought you should know. setting expectations
-
 * container
 ** main axis and cross-axis
 ** items flow from left to right on the main axis
 ** and top to bottom on the cross axis
+
+* flex container
+** (boxes move left to right, rotate cross-axis, grow, shrink, holy grail layout, re-order)
 
 * justify-content
 ** flex-start

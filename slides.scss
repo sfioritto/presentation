@@ -139,14 +139,7 @@ body, html {
     }
 }
 
-
-/******************************
-* flex-demo
-*/
-
-.flex-demo {
-
-    transition: all 1s;
+.standard-flex-boxes {
 
     .bars, .boxes {
         position: absolute;
@@ -182,7 +175,6 @@ body, html {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         
         > div {
             height: 10vmin;
@@ -192,6 +184,19 @@ body, html {
             margin: 1vmin;
         }
     }
+
+}
+
+
+/******************************
+* flex-demo
+*/
+
+.flex-demo {
+
+    .boxes { flex-direction: column; }
+
+    transition: all 1s;
 
     &.active .boxes > div:first-of-type {
         -webkit-animation-name: flex-down;
@@ -284,7 +289,31 @@ body, html {
 }
 
 
+/******************************
+ * justify-content
+*/
+.justify-content, .justify-content-values {
+    flex-direction: column;
+    h2 {
+        @include archer;
+        font-size: $font-size-5;
+    }
+}
 
+
+.justify-flex-start .boxes { justify-content: flex-start; }
+.justify-flex-end .boxes {  justify-content: flex-end; }
+.justify-center .boxes { justify-content: center; }
+.justify-space-around .boxes { justify-content: space-around; }
+.justify-space-between .boxes { justify-content: space-between; }
+
+
+
+
+
+/******************************
+* flex-basis-auto
+*/
 .flex-basis-auto {
     .container {
         height: 100%;

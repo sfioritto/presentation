@@ -102,42 +102,44 @@ body, html {
   .w3c-image figure img {
     width: 100%; }
 
+.standard-flex-boxes .bars, .standard-flex-boxes .boxes {
+  position: absolute;
+  border: 1px solid #3e75ab;
+  height: 100vmin;
+  width: 100vmin;
+  left: 50%;
+  top: 50%;
+  margin-left: -50vmin;
+  margin-top: -50vmin; }
+.standard-flex-boxes .bars > div {
+  height: 50%;
+  width: 50%;
+  float: left; }
+.standard-flex-boxes .bars > div:nth-of-type(1) {
+  border-bottom: 1px solid #222222; }
+.standard-flex-boxes .bars > div:nth-of-type(2) {
+  border-bottom: 1px solid #222222;
+  border-left: 1px solid #222222; }
+.standard-flex-boxes .bars > div:nth-of-type(4) {
+  border-left: 1px solid #222222; }
+.standard-flex-boxes .boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .standard-flex-boxes .boxes > div {
+    height: 10vmin;
+    width: 10vmin;
+    background-color: #e46119;
+    border: 1px solid #3e75ab;
+    margin: 1vmin; }
+
 /******************************
 * flex-demo
 */
 .flex-demo {
   transition: all 1s; }
-  .flex-demo .bars, .flex-demo .boxes {
-    position: absolute;
-    border: 1px solid #3e75ab;
-    height: 100vmin;
-    width: 100vmin;
-    left: 50%;
-    top: 50%;
-    margin-left: -50vmin;
-    margin-top: -50vmin; }
-  .flex-demo .bars > div {
-    height: 50%;
-    width: 50%;
-    float: left; }
-  .flex-demo .bars > div:nth-of-type(1) {
-    border-bottom: 1px solid #222222; }
-  .flex-demo .bars > div:nth-of-type(2) {
-    border-bottom: 1px solid #222222;
-    border-left: 1px solid #222222; }
-  .flex-demo .bars > div:nth-of-type(4) {
-    border-left: 1px solid #222222; }
   .flex-demo .boxes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column; }
-    .flex-demo .boxes > div {
-      height: 10vmin;
-      width: 10vmin;
-      background-color: #e46119;
-      border: 1px solid #3e75ab;
-      margin: 1vmin; }
   .flex-demo.active .boxes > div:first-of-type {
     -webkit-animation-name: flex-down;
     -webkit-animation-duration: 1s;
@@ -210,6 +212,34 @@ body, html {
   100% {
     margin-left: 0; } }
 
+/******************************
+ * justify-content
+*/
+.justify-content, .justify-content-values {
+  flex-direction: column; }
+  .justify-content h2, .justify-content-values h2 {
+    font-family: 'Archer A', 'Archer B';
+    font-weight: 500;
+    font-size: 6.8462rem; }
+
+.justify-flex-start .boxes {
+  justify-content: flex-start; }
+
+.justify-flex-end .boxes {
+  justify-content: flex-end; }
+
+.justify-center .boxes {
+  justify-content: center; }
+
+.justify-space-around .boxes {
+  justify-content: space-around; }
+
+.justify-space-between .boxes {
+  justify-content: space-between; }
+
+/******************************
+* flex-basis-auto
+*/
 .flex-basis-auto .container {
   height: 100%;
   display: flex;
