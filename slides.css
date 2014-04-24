@@ -16,11 +16,17 @@ body, html {
   justify-content: center;
   align-items: center; }
 
+/******************************
+* hello slide
+*/
 .hello h2 {
   font-family: 'Archer A', 'Archer B';
   font-weight: 500;
   font-size: 6.8462rem; }
 
+/******************************
+* book slide
+*/
 .book {
   /* H2 styling */
   /* end h2 styling*/ }
@@ -87,6 +93,114 @@ body, html {
     font-family: 'Tungsten A', 'Tungsten B';
     font-weight: 400;
     font-size: 6.8462rem; }
+
+/******************************
+* flex-demo
+*/
+.flex-demo {
+  transition: all 1s; }
+  .flex-demo .bars, .flex-demo .boxes {
+    position: absolute;
+    border: 1px solid #3e75ab;
+    height: 100vmin;
+    width: 100vmin;
+    left: 50%;
+    top: 50%;
+    margin-left: -50vmin;
+    margin-top: -50vmin; }
+  .flex-demo .bars > div {
+    height: 50%;
+    width: 50%;
+    float: left; }
+  .flex-demo .bars > div:nth-of-type(1) {
+    border-bottom: 1px solid #222222; }
+  .flex-demo .bars > div:nth-of-type(2) {
+    border-bottom: 1px solid #222222;
+    border-left: 1px solid #222222; }
+  .flex-demo .bars > div:nth-of-type(4) {
+    border-left: 1px solid #222222; }
+  .flex-demo .boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .flex-demo .boxes > div {
+      height: 10vmin;
+      width: 10vmin;
+      background-color: #e46119;
+      border: 1px solid #3e75ab;
+      margin: 1vmin; }
+  .flex-demo.active .boxes > div:first-of-type {
+    -webkit-animation-name: flex-down;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards; }
+  .flex-demo.active .boxes > div:last-of-type {
+    -webkit-animation-name: flex-up;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 2s; }
+  .flex-demo.active .boxes > div:nth-of-type(2) {
+    -webkit-animation-name: flex-left;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s; }
+  .flex-demo.active .boxes > div:nth-of-type(3) {
+    -webkit-animation-name: flex-right;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s; }
+
+@-webkit-keyframes flex-down {
+  0% {
+    margin-top: 0; }
+
+  50% {
+    margin-top: 80vmin; }
+
+  100% {
+    margin-top: 0; } }
+
+@-webkit-keyframes flex-up {
+  0% {
+    margin-bottom: 0; }
+
+  50% {
+    margin-bottom: 80vmin; }
+
+  100% {
+    margin-bottom: 0; } }
+
+@-webkit-keyframes flex-left {
+  0% {
+    margin-right: 0; }
+
+  50% {
+    margin-right: 80vmin; }
+
+  100% {
+    margin-right: 0; } }
+
+@-webkit-keyframes flex-right {
+  0% {
+    margin-left: 0; }
+
+  50% {
+    margin-left: 80vmin; }
+
+  100% {
+    margin-left: 0; } }
 
 .flex-basis-auto .container {
   height: 100%;

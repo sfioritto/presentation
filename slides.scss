@@ -24,6 +24,9 @@ body, html {
     align-items: center;
 }
 
+/******************************
+* hello slide
+*/
 .hello {
     h2 {
         @include archer;
@@ -31,6 +34,9 @@ body, html {
     }
 }
 
+/******************************
+* book slide
+*/
 .book {
 
     figure {
@@ -120,6 +126,151 @@ body, html {
         font-size: $font-size-5;
     }
 }
+
+
+/******************************
+* flex-demo
+*/
+
+.flex-demo {
+
+    transition: all 1s;
+
+    .bars, .boxes {
+        position: absolute;
+        border: 1px solid $base-color;
+        height: 100vmin;
+        width: 100vmin;
+        left: 50%;
+        top: 50%;
+        margin-left: -50vmin;
+        margin-top: -50vmin;
+    }
+    
+    .bars{
+        > div {
+            height: 50%;
+            width : 50%;
+            float: left;
+        }
+        > div:nth-of-type(1){
+            border-bottom: 1px solid $black;
+        }
+        > div:nth-of-type(2){
+            border-bottom: 1px solid $black;
+            border-left: 1px solid $black;
+        }
+        
+        > div:nth-of-type(4){
+            border-left: 1px solid $black;
+        }
+    }
+    
+    .boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        > div {
+            height: 10vmin;
+            width: 10vmin;
+            background-color: $complementary-color;
+            border: 1px solid $base-color;
+            margin: 1vmin;
+        }
+    }
+
+    &.active .boxes > div:first-of-type {
+        -webkit-animation-name: flex-down;
+	    -webkit-animation-duration: 1s;
+	    -webkit-animation-timing-function: ease;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    &.active .boxes > div:last-of-type {
+        -webkit-animation-name: flex-up;
+	    -webkit-animation-duration: 1s;
+	    -webkit-animation-timing-function: ease;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 2s;
+    }
+
+    &.active .boxes > div:nth-of-type(2) {
+        -webkit-animation-name: flex-left;
+	    -webkit-animation-duration: 1s;
+	    -webkit-animation-timing-function: ease;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 4s;
+    }
+
+    &.active .boxes > div:nth-of-type(3) {
+        -webkit-animation-name: flex-right;
+	    -webkit-animation-duration: 1s;
+	    -webkit-animation-timing-function: ease;
+	    -webkit-animation-iteration-count: 1;
+	    -webkit-animation-direction: normal;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 4s;
+    }
+
+}
+
+@-webkit-keyframes flex-down {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 80vmin;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@-webkit-keyframes flex-up {
+    0% {
+        margin-bottom: 0;
+    }
+    50% {
+        margin-bottom: 80vmin;
+    }
+    100% {
+        margin-bottom: 0;
+    }
+}
+
+@-webkit-keyframes flex-left {
+    0% {
+        margin-right: 0;
+    }
+    50% {
+        margin-right: 80vmin;
+    }
+    100% {
+        margin-right: 0;
+    }
+}
+
+
+@-webkit-keyframes flex-right {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 80vmin;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
 
 
 .flex-basis-auto {

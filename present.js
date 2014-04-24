@@ -19,10 +19,6 @@
         }
     };
     
-    document.onmousedown = function(event) {
-        nextSlide();
-    }
-    
     document.onkeyup = function(event) {
         if (event.keyCode === 37) {
             prevSlide();
