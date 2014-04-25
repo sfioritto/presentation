@@ -390,6 +390,64 @@ body, html {
   order: 0; }
 
 /******************************
+ * flex-grow
+*/
+.flex-grow, .flex-shrink {
+  flex-direction: column; }
+  .flex-grow > div, .flex-shrink > div {
+    height: 100px;
+    width: 90%;
+    margin: 1rem;
+    display: flex; }
+    .flex-grow > div > div, .flex-shrink > div > div {
+      background: #e46119;
+      border: 4px solid #222; }
+
+.flex-grow > div.one div:first-of-type {
+  flex: 1 1 0; }
+.flex-grow > div.one div:last-of-type {
+  flex: 1 1 0; }
+.flex-grow > div.two div:first-of-type {
+  flex: 2 1 0; }
+.flex-grow > div.two div:last-of-type {
+  flex: 1 1 0; }
+.flex-grow > div.three div:first-of-type {
+  flex: 6 1 0; }
+.flex-grow > div.three div:last-of-type {
+  flex: 1 1 0; }
+
+.flex-shrink.active > div {
+  -webkit-animation-name: flex-shrink;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  width: 400px; }
+.flex-shrink > div.one div:first-of-type {
+  flex: 1 1 300px; }
+.flex-shrink > div.one div:last-of-type {
+  flex: 1 1 300px; }
+.flex-shrink > div.two div:first-of-type {
+  flex: 1 2 300px; }
+.flex-shrink > div.two div:last-of-type {
+  flex: 1 1 300px; }
+.flex-shrink > div.three div:first-of-type {
+  flex: 1 6 300px; }
+.flex-shrink > div.three div:last-of-type {
+  flex: 1 1 300px; }
+
+@-webkit-keyframes flex-shrink {
+  0% {
+    width: 100%; }
+
+  90% {
+    width: 400px; }
+
+  100% {
+    width: 100%; } }
+
+/******************************
 * flex-basis-auto
 */
 .flex-basis-auto .container {
