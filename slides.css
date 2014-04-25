@@ -16,6 +16,13 @@ body, html {
   justify-content: center;
   align-items: center; }
 
+.code pre {
+  font-size: 4.2308rem;
+  font-family: monospace;
+  font-family: monaco, monospace;
+  font-family: "Andale Mono", AndaleMono, monospace;
+  font-family: "Andale Mono", AndaleMono, monospace; }
+
 /******************************
 * hello slide
 */
@@ -215,9 +222,9 @@ body, html {
 /******************************
  * justify-content
 */
-.justify-content, .justify-content-values, .align-items, .align-items-values {
+.justify-content, .justify-content-values, .align-items, .align-items-values, .flex-wrap {
   flex-direction: column; }
-  .justify-content h2, .justify-content-values h2, .align-items h2, .align-items-values h2 {
+  .justify-content h2, .justify-content-values h2, .align-items h2, .align-items-values h2, .flex-wrap h2 {
     font-family: 'Archer A', 'Archer B';
     font-weight: 500;
     font-size: 6.8462rem; }
@@ -271,6 +278,119 @@ body, html {
     padding-bottom: 4rem; }
   .align-baseline .boxes > div:nth-of-type(4) {
     height: 500px; }
+
+/******************************
+ * flex-direction
+*/
+.flex-direction h2, .flex-direction-values h2 {
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500;
+  font-size: 6.8462rem; }
+
+/******************************
+* row-flow
+*/
+.row-flow .boxes, .row-flow-reverse .boxes {
+  flex-direction: row; }
+.row-flow .boxes > div, .row-flow-reverse .boxes > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6154rem;
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500; }
+.row-flow .boxes > div:first-child, .row-flow-reverse .boxes > div:first-child {
+  margin-left: 0; }
+
+.row-flow-reverse .boxes {
+  flex-direction: row-reverse; }
+
+/******************************
+* column-flow
+*/
+.column-flow .boxes, .column-flow-reverse .boxes {
+  flex-direction: column; }
+.column-flow .boxes > div, .column-flow-reverse .boxes > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6154rem;
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500; }
+
+.column-flow-reverse .boxes {
+  flex-direction: column-reverse; }
+
+/******************************
+* flex-wrap
+*/
+.flex-wrap-wrap .boxes > div, .flex-wrap-reverse .boxes > div {
+  width: 20vh;
+  font-family: 'Archer A', 'Archer B';
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6154rem; }
+
+.flex-wrap-wrap .boxes {
+  flex-wrap: wrap; }
+
+.flex-wrap-reverse .boxes {
+  flex-wrap: wrap-reverse; }
+
+.align-start .boxes {
+  align-content: flex-start; }
+
+.align-end .boxes {
+  align-content: flex-end; }
+
+.align-center .boxes {
+  align-content: center; }
+
+.align-around .boxes {
+  align-content: space-around; }
+
+.align-between .boxes {
+  align-content: space-between; }
+
+/******************************
+ * items v containers
+*/
+.items-v-containers {
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 6.8462rem; }
+
+/******************************
+* order
+*/
+.order {
+  flex-direction: column;
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 4.2308rem; }
+  .order > div {
+    border: 4px solid #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; }
+  .order .top {
+    height: 20vh; }
+  .order .middle {
+    height: 60vh; }
+  .order .bottom {
+    height: 20vh; }
+
+.order.reorder .top {
+  order: 2; }
+.order.reorder .middle {
+  order: 1; }
+.order.reorder .bottom {
+  order: 0; }
 
 /******************************
 * flex-basis-auto

@@ -68,7 +68,7 @@
 ** space-around
 ** space-between
 
-* flex conatiner versus child elements
+* order
 
 * flex-grow, flex-shrink, flex-basis
 ** gonna fly through this, just give you the idea. it's the most complicated. usually takes some fudging to get it right. 

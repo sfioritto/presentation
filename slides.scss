@@ -24,6 +24,16 @@ body, html {
     align-items: center;
 }
 
+.code {
+    pre {
+        font-size: $font-size-4;
+        font-family: monospace;
+        font-family: monaco, monospace;
+        font-family: "Andale Mono", AndaleMono, monospace;
+        font-family: "Andale Mono", AndaleMono, monospace;
+    }
+}
+
 /******************************
 * hello slide
 */
@@ -292,7 +302,7 @@ body, html {
 /******************************
  * justify-content
 */
-.justify-content, .justify-content-values, .align-items, .align-items-values {
+.justify-content, .justify-content-values, .align-items, .align-items-values, .flex-wrap {
     flex-direction: column;
 
     h2 {
@@ -345,6 +355,131 @@ body, html {
     }
 }
 
+
+/******************************
+ * flex-direction
+*/
+.flex-direction, .flex-direction-values {
+    h2 { 
+        @include archer;
+        font-size: $font-size-5;
+    }
+}
+
+
+/******************************
+* row-flow
+*/
+.row-flow, .row-flow-reverse {
+    
+    .boxes {
+        flex-direction: row;
+    }
+    .boxes > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-3;
+        @include archer;
+    }
+    .boxes > div:first-child { margin-left: 0; }
+}
+
+.row-flow-reverse {
+    .boxes { flex-direction: row-reverse; }
+}
+
+/******************************
+* column-flow
+*/
+
+.column-flow, .column-flow-reverse {
+    .boxes {
+        flex-direction: column;
+    }
+    .boxes > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-3;
+        @include archer;
+    }
+}
+
+.column-flow-reverse {
+    .boxes {flex-direction: column-reverse; }
+}
+
+
+/******************************
+* flex-wrap
+*/
+.flex-wrap-wrap, .flex-wrap-reverse {
+    .boxes > div {
+        width: 20vh;
+        @include archer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-3;
+    }
+}
+
+.flex-wrap-wrap {
+    .boxes {
+        flex-wrap: wrap;
+    }
+}
+
+.flex-wrap-reverse {
+    .boxes {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+.align-start .boxes { align-content: flex-start; }
+.align-end .boxes { align-content: flex-end; }
+.align-center .boxes { align-content: center; }
+.align-around .boxes { align-content: space-around; }
+.align-between .boxes { align-content: space-between; }
+
+
+/******************************
+ * items v containers
+*/
+.items-v-containers {
+    @include tungsten;
+    text-transform: uppercase;
+    font-size: $font-size-5;
+}
+
+/******************************
+* order
+*/
+.order {
+    flex-direction: column;
+    @include tungsten;
+    text-transform: uppercase;
+    font-size: $font-size-4;
+
+    > div {
+        border: 4px solid #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .top { height: 20vh; }
+    .middle { height: 60vh; }
+    .bottom { height: 20vh; }
+}
+
+.order.reorder {
+    .top { order: 2; }
+    .middle { order: 1; }
+    .bottom { order: 0; }
+}
+
 /******************************
 * flex-basis-auto
 */
@@ -373,3 +508,4 @@ body, html {
         }
     }
 }
+
