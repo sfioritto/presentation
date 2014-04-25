@@ -27,7 +27,8 @@ body, html {
 .code {
     pre {
         font-size: $font-size-4;
-        font-family: "Andale Mono", AndaleMono, monospace;
+        font-family: monospace;
+        font-weight: bold;
     }
 }
 
@@ -616,6 +617,55 @@ body, html {
     .container:nth-of-type(3) > div {
         flex: 1 1 0;
     }
+}
 
+/******************************
+* Sticky footer
+*/
+
+.sticky-css {
+    pre { font-size: $font-size-3; }
+}
+
+.sticky-footer {
+    flex-direction: column;
+    @include tungsten;
+    font-size: $font-size-5;
+    > div {
+        border: 3px solid #222;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .top, .bottom {
+        height: 20vh;
+        flex: 0 0 auto;
+    }
+    .middle {
+        flex: 1 1 auto;
+    }
+}
+
+/******************************
+ * holy grail
+ */
+
+.holy-grail {
+    flex-direction: column;
+    align-items: stretch !important;
+    @include tungsten;
+    text-transform: uppercase;
+    font-size: $font-size-4;
+    div { display: flex; justify-content: center; align-items: center; }
+    .top, .bottom { height: 20vh; border: 3px solid #222; }
+    .middle {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: stretch;
+        .left, .right { width: 10vw; font-size: $font-size-2; border: 1px solid #222;}
+        .center { flex: 1 1 auto; }
+
+    }
 }
 

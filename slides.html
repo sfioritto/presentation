@@ -374,6 +374,76 @@
       </div>
 
     </div>
+
+    <div class="slide items-v-containers">
+      <div>
+        <h2>sticky footer</h2>
+      </div>
+    </div>
+
+    <div class="slide code sticky-css">
+        <pre>
+.sticky-footer {
+    flex-direction: column;
+
+    >div{width:100%;}
+
+    .top,.bottom {
+        height: 20vh;
+        flex: 0 0 auto;
+    }
+
+    .middle {
+        flex: 1 1 auto;
+    }
+}
+
+        </pre>
+    </div>
+
+
+    <div class="slide sticky-footer">
+      <div class="top">top</div>
+      <div class="middle">middle</div>
+      <div class="bottom">bottom</div>
+    </div>
+
+
+    <div class="slide items-v-containers">
+      <div>
+        <h2>holy grail</h2>
+      </div>
+    </div>
+
+    <div class="slide holy-grail">
+      <div class="top">top</div>
+      <div class="middle">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+      </div>
+      <div class="bottom">bottom</div>
+    </div>
+
+    <div class="slide code sticky-css">
+      <pre>
+.holy-grail {
+
+    flex-direction: column;
+
+    .top, .bottom { height: 20vh; }
+
+    .middle {
+        flex: 1 1 auto;
+        display: flex;
+        .left, .right { width: 10vw; }
+        .center { flex: 1 1 auto; }
+    }
+}
+      </pre>
+    </div>
+
+    
     <script src="present.js"></script>
   </body>
 </html>

@@ -18,7 +18,8 @@ body, html {
 
 .code pre {
   font-size: 4.2308rem;
-  font-family: "Andale Mono", AndaleMono, monospace; }
+  font-family: monospace;
+  font-weight: bold; }
 
 /******************************
 * hello slide
@@ -478,3 +479,54 @@ body, html {
     flex: 1 1 auto; }
   .flex-basis-auto .container:nth-of-type(3) > div {
     flex: 1 1 0; }
+
+/******************************
+* Sticky footer
+*/
+.sticky-css pre {
+  font-size: 2.6154rem; }
+
+.sticky-footer {
+  flex-direction: column;
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-weight: 400;
+  font-size: 6.8462rem; }
+  .sticky-footer > div {
+    border: 3px solid #222;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .sticky-footer .top, .sticky-footer .bottom {
+    height: 20vh;
+    flex: 0 0 auto; }
+  .sticky-footer .middle {
+    flex: 1 1 auto; }
+
+/******************************
+ * holy grail
+ */
+.holy-grail {
+  flex-direction: column;
+  align-items: stretch !important;
+  font-family: 'Tungsten A', 'Tungsten B';
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 4.2308rem; }
+  .holy-grail div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .holy-grail .top, .holy-grail .bottom {
+    height: 20vh;
+    border: 3px solid #222; }
+  .holy-grail .middle {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: stretch; }
+    .holy-grail .middle .left, .holy-grail .middle .right {
+      width: 10vw;
+      font-size: 1.6154rem;
+      border: 1px solid #222; }
+    .holy-grail .middle .center {
+      flex: 1 1 auto; }
