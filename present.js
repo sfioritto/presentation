@@ -1,7 +1,7 @@
 (function(){
 
     var slides = document.getElementsByClassName("slide"),
-    active = slides[52],
+    active = slides[0],
 
     nextSlide = function(){
         if (active && active.nextElementSibling) {
