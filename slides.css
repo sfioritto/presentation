@@ -215,9 +215,9 @@ body, html {
 /******************************
  * justify-content
 */
-.justify-content, .justify-content-values {
+.justify-content, .justify-content-values, .align-items, .align-items-values {
   flex-direction: column; }
-  .justify-content h2, .justify-content-values h2 {
+  .justify-content h2, .justify-content-values h2, .align-items h2, .align-items-values h2 {
     font-family: 'Archer A', 'Archer B';
     font-weight: 500;
     font-size: 6.8462rem; }
@@ -236,6 +236,41 @@ body, html {
 
 .justify-space-between .boxes {
   justify-content: space-between; }
+
+.align-flex-start .boxes {
+  align-items: flex-start; }
+
+.align-flex-end .boxes {
+  align-items: flex-end; }
+
+.align-center .boxes {
+  align-items: center; }
+
+.align-stretch .boxes {
+  align-items: stretch; }
+  .align-stretch .boxes > div {
+    height: initial; }
+
+.align-baseline .boxes {
+  align-items: baseline; }
+  .align-baseline .boxes > div {
+    font-family: 'Archer A', 'Archer B';
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6154rem;
+    padding-top: 1rem; }
+  .align-baseline .boxes > div:nth-of-type(1) {
+    height: 300px; }
+  .align-baseline .boxes > div:nth-of-type(2) {
+    height: 200px;
+    padding-bottom: 10rem; }
+  .align-baseline .boxes > div:nth-of-type(3) {
+    padding-top: 8rem;
+    padding-bottom: 4rem; }
+  .align-baseline .boxes > div:nth-of-type(4) {
+    height: 500px; }
 
 /******************************
 * flex-basis-auto

@@ -47,10 +47,6 @@
 ** stretch
 ** baseline
 
-* now we mess everything up
-** probably wondering "why so complicated? Why not just "left, right, top, bottom"
-** because you can rotate the axes
-
 * flex-direction
 ** row (default)
 ** row-reverse
